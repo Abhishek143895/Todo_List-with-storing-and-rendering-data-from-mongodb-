@@ -1,0 +1,20 @@
+{
+  "name": "codial",
+  "version": "1.0.0",
+  "description": "my social media web app",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon script.js",                            
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Social",
+    "media",
+    "app"
+  ],
+  "author": "Abhishek",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

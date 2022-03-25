@@ -1,0 +1,3 @@
+# This file is created for ignoring node modulre folder.bcz it is too heavy folder when we push our code onto git then this folder will also goes along through.thats why we need to ignore that forlder.
+
+node_modules/
