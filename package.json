@@ -4,7 +4,7 @@
   "description": "my social media web app",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon script.js",                            
+    "start": "nodemon script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -15,6 +15,7 @@
   "author": "Abhishek",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.3"
   }
 }
