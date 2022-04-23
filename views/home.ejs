@@ -1,10 +1,75 @@
 <html>
-    <head>
+<head>
         <title>
             <%= title %>
         </title>
-        <body>
-            <h1>Codial / <%= title %></h1>
-        </body>
-    </head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+                <link rel="stylesheet" href="main.css">
+        
+</head>
+    <body> 
+    
+<!-- ------------------------------------------------------------------Biggest div--------------------------------------------------------------------------------------------- -->
+            <section class="body">
+              <div class="outer">                  
+                <h1>TODO App</h1>           
+                 <hr>
+
+<!-- -------------------------------------------------------------------div-1------------------------------------------------------------------------------------------------- -->
+                <div class="inner">
+                    <form action="/create-todo" method="post">                           <!--/create todo ka sirf itna kam hai ki form ke submitted data ko yaha se uthakr main script file me uss jagah tak bhejna hai jaha / craete-todo(route) likha ho app.post me-->
+                        <label>Description</label> <br>
+                        <input type="text" name="Description" placeholder="What do you need to do?" required>
+                       
+                        <div class="bigger">
+                            <div class="div1">
+                                <label>Category</label>
+                                <select name="Category">
+                                    <option>Personal</option>
+                                    <option>Work</option>
+                                    <option>School</option>
+                                    <option>Cleaning</option>
+                                    <option>other</option>
+                                </select>
+                            </div>
+                            <div class="div2">
+                                <label>DUE DATE</label>
+                                <input type="date" name="Time">
+                            </div>
+                       
+                        </div>
+                        <div class="div3">
+                            <div class="add-btn"> <button> <i class="fa-solid fa-plus"></i> ADD TASK </button></div>
+                        </div>
+                    </form>
+                    
+               </div>
+
+<!--------------------------------------------------------------------div-2----------------------------------------------------------------------------------------------->
+            
+                <div class="div4">
+                   <% for(let i of todos){%>
+                     <div class="div5">
+                         <div class="div6">
+                           <a href="/delete-contact/?id=<%= i._id %>"><i class="fa-solid fa-trash-can"></i></a>
+                           <p><%= i.Description%></p>
+                        </div> 
+                        <div class="div7">
+                           <p><%= i.Category%></p>
+                        </div>
+                     </div>
+
+                     <div class="div8">
+                           <p><i class="fa-solid fa-calendar-days"></i><%= i.Time.toDateString()%></p>
+                    </div>
+                   <%}%>
+                </div>
+
+            
+             
+        </div>
+    </section>
+       
+    </body>
+   
 </html>
